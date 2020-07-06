@@ -198,4 +198,6 @@ export const watch = () => {
   gulp.watch(paths.js.all, gulp.series(js))
 }
 
+export const build = gulp.parallel(html, styles, js, sprite)
+
 export default gulp.series(gulp.parallel(html, styles, js), sprite, gulp.parallel(watch, server))
