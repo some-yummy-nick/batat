@@ -1,0 +1,157 @@
+html,
+body {
+	height: 100%;
+}
+
+html {
+	-webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
+	-webkit-overflow-scrolling: touch;
+	scrollbar-color: rgba(white, 0.3) rgba(#2e2b39, 0.3);
+	overflow-x: hidden;
+
+	&::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: rgba(#2e2b39, 0.3);
+		border-radius: $border-radius;
+	}
+}
+
+.body {
+	color: $color;
+	font-size: 16px;
+	text-rendering: optimizeSpeed;
+	font-family: Montserrat, Helvetica, sans-serif;
+}
+
+*:focus,
+button:focus {
+	outline: none;
+}
+
+button:focus {
+	box-shadow: none !important;
+}
+
+button {
+	transition: color 0.3s, border-color 0.3s, transform 0.3s,  background-color 0.3s !important ;
+}
+
+svg {
+	transition: fill 0.3s, filter 0.3s, stroke 0.3s;
+}
+
+a {
+	position: relative;
+	color: $color;
+	transition: color 0.3s,  background-color 0.3s, border-color 0.3s !important;
+
+	&:hover {
+		text-decoration: none;
+		color: $primary;
+	}
+
+	&:focus {
+		text-decoration: none;
+		color: $color;
+		box-shadow: none !important;
+	}
+}
+
+a:not([class]) {
+	text-decoration-skip-ink: auto;
+}
+
+.break:after {
+	// line break br with css
+	content: "\A";
+	white-space: pre;
+}
+
+input, button, textarea, select {
+	font: inherit;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+	color: transparent;
+}
+
+img,
+video,
+audio {
+	max-width: 100%;
+	height: auto;
+}
+
+sub,
+sup {
+	line-height: 0;
+}
+
+label,
+button,
+select {
+	cursor: pointer;
+}
+
+input {
+	cursor: text;
+}
+
+[disabled] {
+	cursor: default;
+}
+
+abbr[title],
+acronym[title],
+dfn {
+	cursor: help;
+}
+
+textarea {
+	resize: vertical;
+}
+
+input,
+textarea {
+	background-clip: padding-box;
+}
+
+p {
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+.sr-only {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+.mobile {
+	display: none !important;
+
+	@media (max-width: $screen-xs) {
+		display: inline-block !important;
+	}
+}
+
+.desktop {
+	@media (max-width: $screen-xs) {
+		display: none !important;
+	}
+}
+
+.center {
+	text-align: center;
+}
