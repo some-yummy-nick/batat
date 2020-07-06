@@ -1,4 +1,4 @@
-#gulp and webpack
+gulp and webpack
 
 Сборка для лендинга
 ***
