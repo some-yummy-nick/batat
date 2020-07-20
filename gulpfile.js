@@ -179,6 +179,7 @@ export const js = () => {
       }
     }))
     .pipe(gulp.dest(paths.js.build))
+    .pipe(sync.stream())
 }
 
 export const server = () => {
