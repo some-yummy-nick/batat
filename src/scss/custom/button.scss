@@ -1,0 +1,35 @@
+.button {
+  display: inline-block;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 50px 0;
+  border: 2px solid transparent;
+
+  &:hover {
+    color: #fff;
+  }
+
+  &_big {
+    padding: 31px 57px;
+  }
+
+  &_small {
+    padding: 16.5px 57px;
+  }
+
+  &_primary {
+    background-color: $primary;
+
+    &:hover {
+      border-color: $primary;
+      background-color: transparent;
+    }
+  }
+
+  &_second {
+    background-color: $second;
+  }
+}

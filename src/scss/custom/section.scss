@@ -1,0 +1,15 @@
+.section {
+  padding: 110px 0;
+
+  &__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+    font-size: 60px;
+    font-family: 'Didact Gothic', sans-serif;
+    text-align: center;
+
+    &_white {
+      color: #fff;
+    }
+  }
+}

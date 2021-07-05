@@ -1,4 +1,25 @@
 $icons: (
-  sprite: (width: 31px, height: 22px, svgPath: '../../images/site/sprite.svg?5596112'),
-  vk: (width: 21px, height: 12px, backgroundX: 0px, backgroundY: 0px),
+  sprite: (
+    width: 175px,
+    height: 145px,
+    svgPath: '../../images/site/sprite.svg?5596112',
+  ),
+  menu: (
+    width: 65px,
+    height: 45px,
+    backgroundX: 0px,
+    backgroundY: 0px,
+  ),
+  no-gluten: (
+    width: 59px,
+    height: 58px,
+    backgroundX: -75px,
+    backgroundY: -55px,
+  ),
+  vk: (
+    width: 21px,
+    height: 12px,
+    backgroundX: -144px,
+    backgroundY: -123px,
+  ),
 );

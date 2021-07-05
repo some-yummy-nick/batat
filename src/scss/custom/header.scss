@@ -1,4 +1,51 @@
 .header {
-  margin-bottom: 20px;
-  padding-top: 20px;
+  width: 100%;
+  margin-bottom: 183px;
+  padding-top: 57px;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    .leaf {
+      fill: #b24d97;
+    }
+  }
+
+  &__call {
+    margin-top: 40px;
+  }
+
+  &__phone {
+    margin-right: 30px;
+    font-size: 27px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+
+  &__order {
+    display: inline-block;
+    padding: 7.5px 21.5px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    text-decoration: none;
+
+    &:hover {
+      color: #fff;
+      border-color: $primary;
+      background-color: $primary;
+    }
+  }
 }

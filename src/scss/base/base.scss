@@ -1,3 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 html,
 body {
   height: 100%;
@@ -11,7 +20,7 @@ html {
   overflow-x: hidden;
 
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
 
   &::-webkit-scrollbar-thumb {
@@ -24,7 +33,7 @@ html {
   color: $color;
   font-size: 16px;
   text-rendering: optimizeSpeed;
-  font-family: Montserrat, Helvetica, sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 *:focus,
@@ -37,7 +46,8 @@ button:focus {
 }
 
 button {
-  transition: color 0.3s, border-color 0.3s, transform 0.3s, background-color 0.3s !important;
+  transition: color 0.3s, border-color 0.3s, transform 0.3s,
+    background-color 0.3s !important;
 }
 
 svg {
@@ -67,11 +77,14 @@ a:not([class]) {
 
 .break:after {
   // line break br with css
-  content: "\A";
+  content: '\A';
   white-space: pre;
 }
 
-input, button, textarea, select {
+input,
+button,
+textarea,
+select {
   font: inherit;
 }
 
@@ -154,4 +167,15 @@ p {
 
 .center {
   text-align: center;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
 }
