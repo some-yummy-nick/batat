@@ -1,0 +1,24 @@
+.about {
+  padding-top: 110px;
+  padding-bottom: 105px;
+
+  &__wrapper {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__logo {
+    margin-right: 70px;
+  }
+
+  &__title {
+    margin-bottom: 50px;
+    font-size: 48px;
+    font-family: 'Didact Gothic', sans-serif;
+    font-weight: 400;
+  }
+
+  &__text {
+    font-size: 21px;
+  }
+}

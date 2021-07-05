@@ -1,0 +1,15 @@
+.phone {
+  margin-right: 30px;
+  font-size: 27px;
+  font-weight: 700;
+  text-decoration: none;
+  color: $color;
+
+  &:hover {
+    color: $primary;
+  }
+
+  &_white {
+    color: #fff;
+  }
+}

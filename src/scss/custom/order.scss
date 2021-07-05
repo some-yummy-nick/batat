@@ -1,4 +1,134 @@
 .order {
   background-color: $second;
   color: #fff;
+
+  &__title {
+    margin-bottom: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__form {
+    text-align: center;
+  }
+
+  &__types {
+    display: flex;
+    justify-content: center;
+    margin-left: -40px;
+    margin-bottom: 60px;
+    font-size: 0;
+  }
+
+  &__input {
+    &:checked + .order__label {
+      background-color: $primary;
+      color: #fff;
+
+      &:hover {
+        border-color: transparent;
+      }
+    }
+
+    &:checked + .order__day {
+      background-color: $primary;
+
+      &:hover {
+        border-color: #fff;
+      }
+    }
+  }
+
+  &__label {
+    display: inline-block;
+    margin-left: 40px;
+    padding: 17.5px 34px;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #ceebfb;
+    border-radius: 36px;
+    border: 2px solid transparent;
+    color: $color;
+    transition: color 0.3s, background-color 0.3s, border-color 0.3s;
+
+    &:hover {
+      border-color: #ceebfb;
+      background-color: transparent;
+      color: #fff;
+    }
+  }
+
+  &__days {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 65px;
+    margin-bottom: 78px;
+  }
+
+  &__day {
+    display: inline-block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background: $second;
+    border: 6px solid #ffffff;
+  }
+
+  &__text {
+    position: absolute;
+    top: calc(100% + 15px);
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-weight: 700;
+  }
+
+  &__number {
+    white-space: nowrap;
+    font-size: 27px;
+  }
+
+  &__small {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  &__line {
+    width: 224px;
+    margin-left: -4px;
+    margin-right: -4px;
+    height: 18px;
+    background-color: #ceebfb;
+  }
+
+  &__fields {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -26px;
+    margin-bottom: 50px;
+  }
+
+  &__field {
+    margin-left: 26px;
+
+    input {
+      width: 100%;
+      min-width: 358px;
+      padding: 21px 20px;
+      border-radius: 30px;
+      border: none;
+      background-color: #fff;
+      font-weight: 600;
+
+      @include placeholder {
+        color: #b5b5b5;
+      }
+    }
+  }
 }
