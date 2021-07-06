@@ -18,6 +18,17 @@
     justify-content: space-between;
     margin-bottom: 38px;
 
+    &_first {
+      .stage {
+        &__item {
+          &:nth-child(2),
+          &:nth-child(4) {
+            display: none;
+          }
+        }
+      }
+    }
+
     &_around {
       justify-content: space-around;
       margin-bottom: 0;
@@ -59,7 +70,7 @@
     }
   }
 
-  @media (max-width: 994px) {
+  @media (max-width: $screen-md) {
     &__inner {
       background-image: url('/images/line-mobile.svg');
       background-size: 60%;
@@ -69,6 +80,17 @@
       flex-wrap: wrap;
       justify-content: center;
       margin-bottom: 0;
+
+      &_first {
+        .stage {
+          &__item {
+            &:nth-child(2),
+            &:nth-child(4) {
+              display: block;
+            }
+          }
+        }
+      }
 
       &_around {
         display: none;

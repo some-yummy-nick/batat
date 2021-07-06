@@ -120,6 +120,14 @@
     }
   }
 
+  @media (max-width: 1080px) {
+    &__label {
+      flex-grow: 1;
+      width: calc(50% - 40px);
+      white-space: nowrap;
+    }
+  }
+
   @media (max-width: 767px) {
     &.section {
       padding-bottom: 40px;
