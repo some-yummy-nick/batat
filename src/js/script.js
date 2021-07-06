@@ -1,6 +1,16 @@
 ;(function () {
-  const content = document.querySelectorAll('.menu__content')
+  const orderInputs = document.querySelectorAll('.js-order-input')
+  const orderSelect = document.getElementById('js-order-select')
 
+  orderInputs.forEach(item => {
+    item.addEventListener('change', function () {
+      orderSelect.value = this.value
+    })
+  })
+})()
+
+;(function () {
+  const content = document.querySelectorAll('.menu__content')
   var x, i, j, l, ll, selElmnt, a, span, b, c, newSpan
   /* Look for any elements with the class "custom-select": */
   x = document.getElementsByClassName('custom-select')
@@ -22,9 +32,16 @@
       /* For each option in the original select element,
       create a new DIV that will act as an option item: */
       c = document.createElement('DIV')
+
       newSpan = document.createElement('SPAN')
       newSpan.innerHTML = selElmnt.options[j].innerHTML
+      newSpan.setAttribute('data-value', selElmnt.options[j].value)
       c.appendChild(newSpan)
+      if (
+        c.querySelector('span').getAttribute('data-value') == selElmnt.value
+      ) {
+        c.classList.add('same-as-selected')
+      }
       c.addEventListener('click', function (e) {
         /* When an item is clicked, update the original select box,
         and the selected item: */
@@ -45,7 +62,8 @@
               })
               currentContent.style.display = 'block'
             }
-
+            document.getElementById('js-order-select').value = value
+            document.querySelector(`input[value="${value}"]`).checked = true
             h.innerHTML = this.innerHTML
             y = this.parentNode.getElementsByClassName('same-as-selected')
             yl = y.length
@@ -58,7 +76,6 @@
         }
         h.click()
       })
-
       b.appendChild(c)
     }
     x[i].appendChild(b)

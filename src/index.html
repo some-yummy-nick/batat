@@ -180,7 +180,7 @@
         <div class="container">
           <h2 class="section__title">Виды меню</h2>
           <div class="select menu__select mobile custom-select">
-            <select name="menu" class="select__native" id="js-select-menu">
+            <select class="select__native" id="js-select-menu">
               <option value="paleo" selected>Палео-диета</option>
               <option value="paleo">Палео-диета</option>
               <option value="aip">Диета АИП</option>
@@ -259,14 +259,14 @@
               </select>
             </div>
             <div class="order__types">
-              <input type="radio" class="order__input visually-hidden" name="type" checked value="paleo"
+              <input type="radio" class="order__input visually-hidden js-order-input" name="type" checked value="paleo-menu"
                      id="paleo-type">
               <label class="order__label" for="paleo-type">Палео-диета</label>
-              <input type="radio" class="order__input visually-hidden" name="type" value="aip" id="aip-type">
+              <input type="radio" class="order__input visually-hidden js-order-input" name="type" value="aip-menu" id="aip-type">
               <label class="order__label" for="aip-type">Диета АИП</label>
-              <input type="radio" class="order__input visually-hidden" name="type" value="five" id="five-type">
+              <input type="radio" class="order__input visually-hidden js-order-input" name="type" value="five-menu" id="five-type">
               <label class="order__label" for="five-type">Стол №5 по Певзнеру</label>
-              <input type="radio" class="order__input visually-hidden" name="type" value="vegan" id="vegan-type">
+              <input type="radio" class="order__input visually-hidden js-order-input" name="type" value="vegan-menu" id="vegan-type">
               <label class="order__label" for="vegan-type">Вегетарианство</label>
             </div>
             <div class="order__title">Количество дней</div>
