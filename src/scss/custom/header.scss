@@ -19,6 +19,13 @@
     margin-top: 40px;
   }
 
-  &__order {
+  @media (max-width: 767px) {
+    margin-bottom: 60px;
+    padding-top: 45px;
+
+    &__wrapper {
+      flex-direction: column;
+      justify-content: center;
+    }
   }
 }

@@ -17,8 +17,8 @@
   &__types {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-left: -40px;
-    margin-bottom: 60px;
     font-size: 0;
   }
 
@@ -44,6 +44,7 @@
   &__label {
     display: inline-block;
     margin-left: 40px;
+    margin-bottom: 60px;
     padding: 17.5px 34px;
     font-size: 18px;
     font-weight: 600;
@@ -72,7 +73,7 @@
   &__day {
     display: inline-block;
     position: relative;
-    width: 32px;
+    min-width: 32px;
     height: 32px;
     border-radius: 100%;
     background: $second;
@@ -99,7 +100,7 @@
   }
 
   &__line {
-    width: 224px;
+    flex-grow: 1;
     margin-left: -4px;
     margin-right: -4px;
     height: 18px;
@@ -128,6 +129,59 @@
 
       @include placeholder {
         color: #b5b5b5;
+      }
+    }
+  }
+
+  @media (max-width: $screen-lg) {
+    &__small {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__types {
+      display: none;
+    }
+
+    &__days {
+      margin-bottom: 60px;
+      padding-bottom: 40px;
+    }
+
+    &__fields {
+      flex-wrap: wrap;
+      margin-left: 0;
+      margin-bottom: 30px;
+    }
+
+    &__field {
+      width: 100%;
+      margin-left: 0;
+
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+
+      input {
+        min-width: auto;
+      }
+    }
+
+    &__select {
+      width: 100%;
+      margin-bottom: 45px;
+
+      .select-selected {
+        padding: 18px 15px;
+        background-color: $primary;
+        border-radius: 36px;
+        justify-content: center;
+        font-weight: 700;
+      }
+
+      .select-items {
+        color: $color;
       }
     }
   }

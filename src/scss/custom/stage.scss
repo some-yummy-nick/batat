@@ -58,4 +58,38 @@
       color: #fff;
     }
   }
+
+  @media (max-width: 994px) {
+    &__inner {
+      background-image: url('/images/line-mobile.svg');
+      background-size: 60%;
+    }
+
+    &__items {
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-bottom: 0;
+
+      &_around {
+        display: none;
+      }
+    }
+
+    &__item {
+      width: 100%;
+      max-width: initial;
+
+      &:not(:last-child) {
+        margin-bottom: 80px;
+      }
+    }
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 60px;
+
+    &__title {
+      margin-bottom: 90px;
+    }
+  }
 }

@@ -16,6 +16,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 0 15px;
   }
 
   &__text {
@@ -23,6 +24,7 @@
     margin-bottom: 52px;
     font-size: 72px;
     font-family: 'Didact Gothic', sans-serif;
+    font-weight: 400;
   }
 
   &__order {
@@ -52,6 +54,30 @@
       max-width: 223px;
       font-weight: 700;
       font-size: 20px;
+    }
+  }
+
+  @media (max-width: 767px) {
+    &__text {
+      font-size: 40px;
+    }
+
+    &__order {
+      margin-bottom: 60px;
+    }
+
+    &__features {
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+
+    &__feature {
+      width: 50%;
+      margin-bottom: 40px;
+
+      &-text {
+        font-size: 18px;
+      }
     }
   }
 }

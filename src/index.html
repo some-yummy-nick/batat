@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Батат</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap" rel="stylesheet">
@@ -98,7 +100,7 @@
     <main>
       <section class="section features">
         <div class="container">
-          <h2 class="section__title">Почему заказывают у нас</h2>
+          <h2 class="section__title">Почему заказывают у&nbsp;нас</h2>
           <div class="features__about">В нашей работе мы опираемся на назначения врачей и научные данные, а также
             используем надёжных поставщиков, проверенные и свежие продукты. Никакого сахара, лактозы и глютена.
           </div>
@@ -150,8 +152,14 @@
               <div class="stage__item" data-item="1">
                 Вы делаете заказ на основе назначений врача
               </div>
+              <div class="stage__item mobile" data-item="2">
+                Мы бесплатно доставляем еду по Казани
+              </div>
               <div class="stage__item" data-item="3">
                 Вы получаете готовые блюда, которые можете разогреть, когда вам удобно
+              </div>
+              <div class="stage__item mobile" data-item="4">
+                Питаетесь вкусно, разнообразно и правильно
               </div>
               <div class="stage__item" data-item="5">
                 Вам становится лучше и веселее жить
@@ -171,6 +179,15 @@
       <section class="section menu">
         <div class="container">
           <h2 class="section__title">Виды меню</h2>
+          <div class="select menu__select mobile custom-select">
+            <select name="menu" class="select__native" id="js-select-menu">
+              <option value="paleo" selected>Палео-диета</option>
+              <option value="paleo">Палео-диета</option>
+              <option value="aip">Диета АИП</option>
+              <option value="five">Стол №5 по Певзнеру</option>
+              <option value="vegan">Вегетарианство</option>
+            </select>
+          </div>
           <div class="menu__wrapper">
             <input type="radio" name="menu" class="menu__input visually-hidden" id="paleo" checked>
             <label for="paleo" class="menu__label">Палео-диета</label>
@@ -232,6 +249,15 @@
           <h2 class="section__title">Закажите готовый набор</h2>
           <form class="order__form">
             <div class="order__title">Выбор меню</div>
+            <div class="select order__select mobile custom-select" >
+              <select name="menu" class="select__native" id="js-order-select">
+                <option value="paleo-menu" selected>Палео-диета</option>
+                <option value="paleo-menu">Палео-диета</option>
+                <option value="aip-menu">Диета АИП</option>
+                <option value="five-menu">Стол №5 по Певзнеру</option>
+                <option value="vegan-menu">Вегетарианство</option>
+              </select>
+            </div>
             <div class="order__types">
               <input type="radio" class="order__input visually-hidden" name="type" checked value="paleo"
                      id="paleo-type">
@@ -248,7 +274,7 @@
               <input id="one-day" type="radio" checked class="order__input visually-hidden" name="day" value="one">
               <label for="one-day" class="order__day">
                 <span class="order__text">
-                  <span class="order__number">1 день</span>
+                  <span class="order__number">1 <span class="large">день</span></span>
                   <span class="order__small">попробовать</span>
                 </span>
               </label>
@@ -256,7 +282,7 @@
               <input id="five-day" type="radio" class="order__input visually-hidden" name="day" value="five">
               <label for="five-day" class="order__day">
                 <span class="order__text">
-                  <span class="order__number">5 дней</span>
+                  <span class="order__number">5 <span class="large">дней</span></span>
                   <span class="order__small">будни</span>
                 </span>
               </label>
@@ -264,7 +290,7 @@
               <input id="seven-day" type="radio" class="order__input visually-hidden" name="day" value="seven">
               <label for="seven-day" class="order__day">
                 <span class="order__text">
-                  <span class="order__number">7 дней</span>
+                  <span class="order__number">7 <span class="large">дней</span></span>
                   <span class="order__small">неделя</span>
                 </span>
               </label>
@@ -272,7 +298,7 @@
               <input id="fourteen-day" type="radio" class="order__input visually-hidden" name="day" value="fourteen">
               <label for="fourteen-day" class="order__day">
                 <span class="order__text">
-                  <span class="order__number">14 дней</span>
+                  <span class="order__number">14 <span class="large">дней</span></span>
                   <span class="order__small">2 неделя</span>
                 </span>
               </label>
@@ -280,7 +306,7 @@
               <input id="month-day" type="radio" class="order__input visually-hidden" name="day" value="month">
               <label for="month-day" class="order__day">
                 <span class="order__text">
-                  <span class="order__number">30 дней</span>
+                  <span class="order__number">30 <span class="large">дней</span></span>
                   <span class="order__small">весь месяц</span>
                 </span>
               </label>

@@ -1,7 +1,7 @@
 .footer {
   flex: 0 0 auto;
   padding-top: 35px;
-  padding-bottom: 20px;
+  padding-bottom: 45px;
   background-color: #ceebfb;
   text-align: center;
   font-size: 14px;
@@ -20,5 +20,20 @@
   &__link {
     color: #1e4bd2;
     text-decoration: none;
+  }
+
+  @media (max-width: 767px) {
+    padding-top: 65px;
+    padding-bottom: 80px;
+
+    &__top {
+      flex-direction: column;
+      margin-bottom: 50px;
+    }
+
+    &__copyright {
+      font-size: 12px;
+      line-height: 140%;
+    }
   }
 }

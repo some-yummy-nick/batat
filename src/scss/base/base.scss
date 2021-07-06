@@ -160,7 +160,13 @@ p {
 }
 
 .desktop {
-  @media (max-width: $screen-xs) {
+  @media (max-width: $screen-md) {
+    display: none !important;
+  }
+}
+
+.large {
+  @media (max-width: $screen-lg) {
     display: none !important;
   }
 }
