@@ -189,23 +189,24 @@
             </select>
           </div>
           <div class="menu__wrapper">
-            <input type="radio" name="menu" class="menu__input visually-hidden" id="paleo" checked>
-            <label for="paleo" class="menu__label">Палео-диета</label>
-            <input type="radio" name="menu" class="menu__input visually-hidden" id="aip">
+            <input type="radio" value="paleo" name="menu" class="menu__input visually-hidden" id="paleo" checked>
+            <label for="paleo"  class="menu__label">Палео-диета</label>
+            <input type="radio" value="aip" name="menu" class="menu__input visually-hidden" id="aip">
             <label for="aip" class="menu__label">Диета АИП</label>
-            <input type="radio" name="menu" class="menu__input visually-hidden" id="five">
+            <input type="radio" value="five" name="menu" class="menu__input visually-hidden" id="five">
             <label for="five" class="menu__label">Стол №5 по Певзнеру</label>
-            <input type="radio" name="menu" class="menu__input visually-hidden" id="vegan">
+            <input type="radio" value="vegan" name="menu" class="menu__input visually-hidden" id="vegan">
             <label for="vegan" class="menu__label">Вегетарианство</label>
             <div class="menu__content" id="paleo-content">
               <div class="menu__items">
                 <div class="menu__item">
-                  <img src="/images/breakfast.jpg" width="363" height="230" alt="" class="menu__image" loading="lazy">
+                  <img src="/images/paleo/breakfast.jpg" width="363" height="230" alt="" class="menu__image"
+                       loading="lazy">
                   <div class="menu__name">Завтрак</div>
                   <div class="menu__text">Омлет на пару</div>
                 </div>
                 <div class="menu__item">
-                  <img src="/images/lunch.jpg" width="363" height="230" alt="" class="menu__image" loading="lazy">
+                  <img src="/images/paleo/lunch.jpg" width="363" height="230" alt="" class="menu__image" loading="lazy">
                   <div class="menu__name">Обед</div>
                   <div class="menu__text">
                     <ul>
@@ -215,12 +216,14 @@
                   </div>
                 </div>
                 <div class="menu__item">
-                  <img src="/images/afternoon.jpg" width="363" height="230" alt="" class="menu__image" loading="lazy">
+                  <img src="/images/paleo/afternoon.jpg" width="363" height="230" alt="" class="menu__image"
+                       loading="lazy">
                   <div class="menu__name">Полдник</div>
                   <div class="menu__text">Овощной смузи</div>
                 </div>
                 <div class="menu__item">
-                  <img src="/images/dinner.jpg" width="363" height="230" alt="" class="menu__image" loading="lazy">
+                  <img src="/images/paleo/dinner.jpg" width="363" height="230" alt="" class="menu__image"
+                       loading="lazy">
                   <div class="menu__name">Ужин</div>
                   <div class="menu__text">Свекольные биточки с рисом</div>
                 </div>
@@ -238,9 +241,137 @@
                 </div>
               </div>
             </div>
-            <div class="menu__content" id="aip-content">АИП</div>
-            <div class="menu__content" id="five-content">По Певзнеру</div>
-            <div class="menu__content" id="vegan-content">Контент про вегетарианство</div>
+            <div class="menu__content" id="aip-content">
+              <div class="menu__items">
+                <div class="menu__item">
+                  <img src="/images/aip/breakfast.jpg" width="363" height="218" alt="" class="menu__image"
+                       loading="lazy">
+                  <div class="menu__name">Завтрак</div>
+                  <div class="menu__text">
+                    <ul>
+                      <li>Кокосовый йогурт с ягодами</li>
+                      <li>Запеченная тыква</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <img src="/images/aip/lunch.jpg" width="363" height="280" alt="" class="menu__image" loading="lazy">
+                  <div class="menu__name">Обед</div>
+                  <div class="menu__text">
+                    <ul>
+                      <li>Запеченная баранина с овощами и травами</li>
+                      <li>Салат из кольраби и зелени</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <img src="/images/aip/afternoon.jpg" width="363" height="242" alt="" class="menu__image"
+                       loading="lazy">
+                  <div class="menu__name">Полдник</div>
+                  <div class="menu__text">
+                    <ul>
+                      <li>Зеленый салат</li>
+                      <li>Печеночный паштет</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="menu__item">
+                  <img src="/images/aip/dinner.jpg" width="363" height="272" alt="" class="menu__image" loading="lazy">
+                  <div class="menu__name">Ужин</div>
+                  <div class="menu__text">Капуста с домашними купатами</div>
+                </div>
+                <div class="menu__about">
+                  <h3 class="menu__title">АИП</h3>
+                  <div class="menu__desc">АИП, Аутоиммунный протокол - это кратковременная диета, которая была
+                    разработана специально для людей с аутоиммунными заболеваниями.
+                  </div>
+                  <div class="menu__bottom">
+                    <div class="menu__kalorazh">1200/1600 ккал</div>
+                    <div class="menu__price">Цена от 1500 в день</div>
+                    <a href="#order" class="button button_primary button_small menu__button">Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu__content" id="five-content">
+              <div class="menu__items">
+                <div class="menu__item">
+                  <img src="/images/five/breakfast.jpg" width="363" height="272" alt="" class="menu__image"
+                       loading="lazy">
+                  <div class="menu__name">Завтрак</div>
+                  <div class="menu__text">Творог с нежирной сметаной</div>
+                </div>
+                <div class="menu__item">
+                  <img src="/images/five/lunch.jpg" width="363" height="227" alt="" class="menu__image" loading="lazy">
+                  <div class="menu__name">Обед</div>
+                  <div class="menu__text">Суп овощной</div>
+                </div>
+                <div class="menu__item">
+                  <img src="/images/five/afternoon.jpg" width="363" height="242" alt="" class="menu__image"
+                       loading="lazy">
+                  <div class="menu__name">Полдник</div>
+                  <div class="menu__text">Гречневая каша с паровой котлетой</div>
+                </div>
+                <div class="menu__item">
+                  <img src="/images/five/dinner.jpg" width="363" height="251" alt="" class="menu__image"
+                       loading="lazy">
+                  <div class="menu__name">Ужин</div>
+                  <div class="menu__text">Рыба, приготовленная на пару с отварным картофелем</div>
+                </div>
+                <div class="menu__about">
+                  <h3 class="menu__title">Стол номер 5 по певзнеру</h3>
+                  <div class="menu__desc">Лечебная диета №5 по Певзнеру рекомендуется людям в период выздоровления после
+                    острых гепатитов и холециститов, вне обострения хронического гепатита, при циррозе печени без её
+                    недостаточности, при хроническом холецистите и желчнокаменной болезни, когда нет обострения.
+                  </div>
+                  <div class="menu__bottom">
+                    <div class="menu__kalorazh">1800/2200 ккал</div>
+                    <div class="menu__price">Цена от 1400 в день</div>
+                    <a href="#order" class="button button_primary button_small menu__button">Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="menu__content" id="vegan-content">
+              <div class="menu__items">
+                <div class="menu__item">
+                  <img src="/images/vegan/breakfast.jpg" width="363" height="355" alt="" class="menu__image"
+                       loading="lazy">
+                  <div class="menu__name">Завтрак</div>
+                  <div class="menu__text">Тёплый салат с кукурузой и шампиньонами</div>
+                </div>
+                <div class="menu__item">
+                  <img src="/images/vegan/lunch.jpg" width="363" height="363" alt="" class="menu__image" loading="lazy">
+                  <div class="menu__name">Обед</div>
+                  <div class="menu__text">Суп из спаржи с нутом</div>
+                </div>
+                <div class="menu__item">
+                  <img src="/images/vegan/afternoon.jpg" width="363" height="364" alt="" class="menu__image"
+                       loading="lazy">
+                  <div class="menu__name">Полдник</div>
+                  <div class="menu__text">Котлеты из Цуккини</div>
+                </div>
+                <div class="menu__item">
+                  <img src="/images/vegan/dinner.jpg" width="363" height="364" alt="" class="menu__image"
+                       loading="lazy">
+                  <div class="menu__name">Ужин</div>
+                  <div class="menu__text">Бурый рис с овощами</div>
+                </div>
+                <div class="menu__about">
+                  <h3 class="menu__title">Вегетарианское меню</h3>
+                  <div class="menu__desc">Чтобы получить вегетарианское меню мы не просто исключили из диеты мясо и
+                    другую пищу животного происхождения, а заменили её на продукты схожие по пищевой ценности и
+                    правильно спланировали диету. При употребление этой диеты вегетарианцы получают необходимое
+                    количество белка, железа, кальция, жирных кислот омега-3, витамина D, витамина B12.
+                  </div>
+                  <div class="menu__bottom">
+                    <div class="menu__kalorazh">1300/1800 ккал</div>
+                    <div class="menu__price">Цена от 1400 в день</div>
+                    <a href="#order" class="button button_primary button_small menu__button">Заказать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -249,7 +380,7 @@
           <h2 class="section__title">Закажите готовый набор</h2>
           <form class="order__form">
             <div class="order__title">Выбор меню</div>
-            <div class="select order__select mobile custom-select" >
+            <div class="select order__select mobile custom-select">
               <select name="menu" class="select__native" id="js-order-select">
                 <option value="paleo-menu" selected>Палео-диета</option>
                 <option value="paleo-menu">Палео-диета</option>
@@ -259,14 +390,18 @@
               </select>
             </div>
             <div class="order__types">
-              <input type="radio" class="order__input visually-hidden js-order-input" name="type" checked value="paleo-menu"
+              <input type="radio" class="order__input visually-hidden js-order-input" name="type" checked
+                     value="paleo-menu"
                      id="paleo-type">
               <label class="order__label" for="paleo-type">Палео-диета</label>
-              <input type="radio" class="order__input visually-hidden js-order-input" name="type" value="aip-menu" id="aip-type">
+              <input type="radio" class="order__input visually-hidden js-order-input" name="type" value="aip-menu"
+                     id="aip-type">
               <label class="order__label" for="aip-type">Диета АИП</label>
-              <input type="radio" class="order__input visually-hidden js-order-input" name="type" value="five-menu" id="five-type">
+              <input type="radio" class="order__input visually-hidden js-order-input" name="type" value="five-menu"
+                     id="five-type">
               <label class="order__label" for="five-type">Стол №5 по Певзнеру</label>
-              <input type="radio" class="order__input visually-hidden js-order-input" name="type" value="vegan-menu" id="vegan-type">
+              <input type="radio" class="order__input visually-hidden js-order-input" name="type" value="vegan-menu"
+                     id="vegan-type">
               <label class="order__label" for="vegan-type">Вегетарианство</label>
             </div>
             <div class="order__title">Количество дней</div>

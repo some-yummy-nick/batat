@@ -66,6 +66,9 @@
   }
 
   &__image {
+    min-height: 230px;
+    max-height: 230px;
+    object-fit: cover;
     margin-bottom: 14px;
   }
 
@@ -76,6 +79,7 @@
   }
 
   &__text {
+    margin-bottom: 1em;
     font-size: 18px;
   }
 
