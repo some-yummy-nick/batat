@@ -1,3 +1,6 @@
+$(document).ready(function () {
+  $('.js-phone-mask').mask('8 000 000 00 00')
+})
 ;(function () {
   const orderInputs = document.querySelectorAll('.js-order-input')
   const orderSelect = document.getElementById('js-order-select')
@@ -8,7 +11,6 @@
     })
   })
 })()
-
 ;(function () {
   const content = document.querySelectorAll('.menu__content')
   var x, i, j, l, ll, selElmnt, a, span, b, c, newSpan
@@ -120,4 +122,51 @@
   /* If the user clicks anywhere outside the select box,
   then close all select boxes: */
   document.addEventListener('click', closeAllSelect)
+})()
+;(function () {
+  var isMobile = window.matchMedia('(max-width: 767px)')
+
+  var app = {
+    initialize: function () {
+      this.setUpListeners()
+    },
+
+    setUpListeners: function () {
+      $('.js-form').on('submit', app.submitForm)
+    },
+
+    submitForm: function (e) {
+      e.preventDefault()
+
+      var form = $(this),
+        submitBtn = form.find('button[type="submit"]')
+
+      var str = form.serialize()
+      var temp = str.split('&')
+      if (!isMobile.matches) {
+        temp.shift()
+        temp[0] = temp[0].replace('type', 'menu')
+      } else {
+        temp.splice(1, 1)
+      }
+      str = temp.join('&')
+      // против повторного нажатия
+      submitBtn.attr({disabled: 'disabled'})
+
+      $.ajax({
+        type: 'POST',
+        url: 'send-contact.php',
+        data: str,
+      })
+        .done(function () {
+          MicroModal.show('js-modal-thanks')
+        })
+        .always(function () {
+          submitBtn.removeAttr('disabled')
+          form[0].reset()
+        })
+    },
+  }
+
+  app.initialize()
 })()
